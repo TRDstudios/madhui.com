@@ -47,26 +47,6 @@ section {
     z-index: 2;
   }
   
-  &::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 250px;
-    height: 250px;
-    background-image: url('https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?q=80&w=600&auto=format&fit=crop'); // Subtle leaf silhouette
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: bottom left;
-    opacity: 0.8;
-    pointer-events: none;
-    z-index: 3;
-    
-    @include respond-to(sm) {
-      width: 150px;
-      height: 150px;
-    }
-  }
 }
 
 // About Us Section
