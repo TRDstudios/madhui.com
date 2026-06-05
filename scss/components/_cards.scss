@@ -706,4 +706,326 @@
   }
 }
 
+// NRI Value Card
+.nri-value-card {
+  background: $bg-white;
+  border-radius: $border-radius-base;
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+  transition: $transition-base;
+  height: 100%;
+
+  .nri-icon-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(189, 30, 36, 0.06);
+    color: $primary-red;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+    transition: $transition-base;
+  }
+
+  h4 {
+    font-family: $font-family-heading;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $text-dark;
+    margin-bottom: 0.75rem;
+    text-transform: capitalize;
+  }
+
+  p {
+    font-size: 0.82rem;
+    line-height: 1.6;
+    color: $text-muted;
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.06);
+    transform: translateY(-3px);
+    border-color: rgba(189, 30, 36, 0.15);
+    
+    .nri-icon-box {
+      background-color: $primary-red;
+      color: #ffffff;
+    }
+  }
+}
+
+// FAQ Accordion Custom Style
+.faq-accordion-custom {
+  .accordion-item {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 0;
+    margin-bottom: 0.5rem;
+    background-color: transparent;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  
+  .accordion-button {
+    padding: 1.25rem 0.5rem;
+    font-family: $font-family-heading;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: $text-dark;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    &::after {
+      display: none; // Hide standard Bootstrap chevron
+    }
+    
+    .faq-icon-indicator {
+      font-size: 0.8rem;
+      color: $text-muted;
+      transition: transform 0.3s ease;
+    }
+    
+    &:not(.collapsed) {
+      color: $primary-red;
+      
+      .faq-icon-indicator {
+        transform: rotate(180deg);
+        color: $primary-red;
+      }
+    }
+  }
+  
+  .accordion-body {
+    padding: 0.5rem 0.5rem 1.5rem 0.5rem;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: $text-muted;
+  }
+}
+
+// Job Opportunity Card
+.job-opportunity-card {
+  background-color: $bg-white;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: $border-radius-base;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+  transition: $transition-base;
+  
+  .job-title {
+    font-family: $font-family-heading;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: $text-dark;
+    margin-bottom: 0.75rem;
+  }
+  
+  .job-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0;
+    
+    .job-tag {
+      font-size: 0.72rem;
+      font-weight: 500;
+      padding: 0.35rem 0.75rem;
+      border-radius: 50px;
+      background-color: $bg-light;
+      color: $text-muted;
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+  }
+  
+  .job-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    
+    @include respond-to(md) {
+      justify-content: flex-start;
+      margin-top: 1.5rem;
+    }
+    
+    .btn-job-desc {
+      display: inline-block;
+      padding: 0.55rem 1.5rem;
+      font-family: $font-family-heading;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: $text-dark;
+      background-color: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 50px;
+      transition: $transition-base;
+      text-decoration: none;
+      
+      &:hover {
+        background-color: $bg-light;
+        border-color: rgba(0,0,0,0.3);
+      }
+    }
+    
+    .btn-job-apply {
+      display: inline-block;
+      padding: 0.55rem 1.75rem;
+      font-family: $font-family-heading;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #ffffff;
+      background-color: #1e2022;
+      border: 1px solid #1e2022;
+      border-radius: 50px;
+      transition: $transition-base;
+      text-decoration: none;
+      
+      &:hover {
+        background-color: $primary-red;
+        border-color: $primary-red;
+      }
+    }
+  }
+  
+  &:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Recent Blog Widget Item
+.recent-blog-widget-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  text-decoration: none !important;
+  
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  
+  .widget-img {
+    width: 70px;
+    height: 50px;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .widget-text {
+    h5 {
+      font-size: 0.82rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: $text-dark;
+      margin-bottom: 0.25rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      transition: $transition-base;
+    }
+    
+    .widget-date {
+      font-size: 0.7rem;
+      color: $text-muted;
+    }
+  }
+  
+  &:hover {
+    .widget-text h5 {
+      color: $primary-red;
+    }
+  }
+}
+
+// Sidebar Reach Form Card
+.sidebar-reach-form-card {
+  background-color: #f8f9fa;
+  border-radius: $border-radius-base;
+  padding: 2rem;
+  border: 1px solid rgba(0,0,0,0.04);
+  
+  h4 {
+    font-family: $font-family-heading;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: $text-dark;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group-sidebar {
+    margin-bottom: 1.25rem;
+    
+    input, textarea {
+      width: 100%;
+      background-color: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+      padding: 0.65rem 0.85rem;
+      font-size: 0.85rem;
+      color: $text-dark;
+      transition: $transition-base;
+      
+      &:focus {
+        outline: none;
+        border-color: $primary-red;
+        box-shadow: 0 0 0 3px rgba(189, 30, 36, 0.1);
+      }
+      
+      &::placeholder {
+        color: #adb5bd;
+      }
+    }
+    
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+  }
+  
+  .btn-sidebar-submit {
+    width: 100%;
+    padding: 0.75rem;
+    font-family: $font-family-heading;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #1e2022;
+    border: 1px solid #1e2022;
+    border-radius: 4px;
+    transition: $transition-base;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    
+    &:hover {
+      background-color: $primary-red;
+      border-color: $primary-red;
+    }
+  }
+}
+
 
