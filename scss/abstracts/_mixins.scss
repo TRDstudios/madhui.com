@@ -1,0 +1,52 @@
+// Breakpoints
+$breakpoints: (
+  xs: 480px,
+  sm: 768px,
+  md: 1024px,
+  lg: 1366px,
+  xl: 1440px,
+  xxl: 1920px
+);
+
+// Media Query Mixin
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (max-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+// Flexbox Center
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Glassmorphism Header
+@mixin glass-header {
+  background: rgba(15, 17, 18, 0.45);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+// Custom Red Line Indicator
+@mixin red-indicator {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: $primary-red;
+  }
+}

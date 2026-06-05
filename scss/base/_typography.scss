@@ -1,0 +1,61 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  font-weight: 700;
+  color: $text-dark;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2.75rem;
+  
+  @include respond-to(sm) {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 2.25rem;
+  position: relative;
+  
+  @include respond-to(sm) {
+    font-size: 1.75rem;
+  }
+
+  &.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    
+    span {
+      color: $primary-red;
+    }
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+p {
+  color: $text-muted;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  
+  &.lead-text {
+    max-width: 800px;
+    margin: 0 auto 2.5rem auto;
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+  }
+}
+
+.text-accent {
+  color: $primary-red !important;
+}
+
+.font-heading {
+  font-family: $font-family-heading;
+}

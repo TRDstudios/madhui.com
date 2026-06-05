@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Residential Apartments | NSL Infratech - Premium Living</title>
+  <meta name="description" content="Explore premium 3 & 4 BHK apartments, luxury high-rises, and green villa projects by NSL Infratech in Hyderabad.">
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+  <!-- FontAwesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Compiled Custom CSS -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       SITE HEADER / NAVIGATION
+       ========================================== -->
+  <header class="site-header" id="site-header">
+    <div class="navbar-custom">
+      <a href="index.html" class="brand-logo" id="brand-logo-header">
+        <div class="logo-circle">NSL</div>
+        <div class="logo-text">
+          <span class="company-title">NSL Infratech</span>
+          <span class="company-sub">Space Growth Relationship</span>
+        </div>
+      </a>
+      
+      <ul class="nav-menu" id="nav-menu">
+        <li class="nav-item-custom"><a href="index.html">Home</a></li>
+        <li class="nav-item-custom"><a href="about-us.html">About Us</a></li>
+        <li class="nav-item-custom dropdown-custom">
+          <a href="#" class="dropdown-trigger active">Projects <i class="fa-solid fa-chevron-down ms-1" style="font-size: 0.65rem;"></i></a>
+          <ul class="dropdown-menu-custom">
+            <li><a href="residential-apartments.html" class="active">Residential Apartments</a></li>
+            <li><a href="commercial-office-spaces.html">Commercial Office Spaces</a></li>
+          </ul>
+        </li>
+        <li class="nav-item-custom"><a href="about-nsl-group.html">About NSL Group</a></li>
+        <li class="nav-item-custom"><a href="csr.html">CSR</a></li>
+        <li class="nav-item-custom"><a href="index.html#associations">HR Corner</a></li>
+        <li class="nav-item-custom"><a href="index.html#blog">Careers</a></li>
+        <li class="nav-item-custom"><a href="index.html#blog">Blogs</a></li>
+        <li class="nav-item-custom"><a href="index.html#contact">Contact Us</a></li>
+      </ul>
+      
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle Menu">
+        <i class="fa-solid fa-bars-staggered"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay Panel -->
+  <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+  <div class="mobile-nav-panel" id="mobile-nav-panel">
+    <button class="close-mobile-nav" id="close-mobile-nav">&times;</button>
+    <div class="mobile-nav-links">
+      <a href="index.html">Home</a>
+      <a href="about-us.html">About Us</a>
+      <a href="residential-apartments.html" class="active">Residential Apartments</a>
+      <a href="commercial-office-spaces.html">Commercial Office Spaces</a>
+      <a href="about-nsl-group.html">About NSL Group</a>
+      <a href="csr.html">CSR</a>
+      <a href="index.html#associations">HR Corner</a>
+      <a href="index.html#blog">Careers</a>
+      <a href="index.html#blog">Blogs</a>
+      <a href="index.html#contact">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       HERO BANNER (MonoTower specifications)
+       ========================================== -->
+  <section class="hero-section" id="home" style="height: 90vh; background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 100%), url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1600&auto=format&fit=crop');">
+    <div class="hero-overlay"></div>
+    
+    <div class="residential-hero-content">
+      <span class="d-block text-uppercase letter-spacing-lg mb-2" style="font-size: 1.15rem; color: #ffc107; font-weight: 700;">Iconic MonoTower</span>
+      <h1 class="font-heading text-white fw-bold mb-3" style="font-size: 3rem; text-shadow: 0 4px 10px rgba(0,0,0,0.5);">G+40 Floor High Rise</h1>
+      <p class="fs-5 mb-4 text-white-50">Large 3 & 4 BHK @ Rs. 1.99 Cr.* Onwards</p>
+      
+      <!-- Specifications Strip -->
+      <div class="spec-badge-strip mb-4">
+        <div class="spec-column-box">
+          <i class="fa-solid fa-map-location-dot"></i>
+          <div class="spec-text">
+            <span class="spec-title">Location</span>
+            <span class="spec-value">Hitec City Link Road</span>
+          </div>
+        </div>
+        <div class="spec-column-box">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div class="spec-text">
+            <span class="spec-title">Security</span>
+            <span class="spec-value">24/7 Gate Guarded</span>
+          </div>
+        </div>
+        <div class="spec-column-box">
+          <i class="fa-solid fa-dumbbell"></i>
+          <div class="spec-text">
+            <span class="spec-title">Fitness</span>
+            <span class="spec-value">Fully Equipped Gym</span>
+          </div>
+        </div>
+        <div class="spec-column-box">
+          <i class="fa-solid fa-house-chimney-window"></i>
+          <div class="spec-text">
+            <span class="spec-title">Clubhouse</span>
+            <span class="spec-value">25,000+ Sq.Ft.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       RESIDENTIAL PROJECTS LIST GRID
+       ========================================== -->
+  <section class="residential-grid-section section-bg-white" id="residential-projects">
+    <div class="container">
+      <div class="row">
+        <!-- Project 1 -->
+        <div class="col-md-6">
+          <div class="project-grid-card">
+            <div class="img-box">
+              <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=600&auto=format&fit=crop" alt="NSL Infratech">
+            </div>
+            <h3 class="project-title">NSL Infratech</h3>
+            <div class="project-meta-info">
+              <div class="meta-item"><i class="fa-solid fa-map-pin"></i> Kothapet, Hyderabad</div>
+              <div class="meta-item"><i class="fa-solid fa-indian-rupee-sign"></i> 1.25 Cr onwards</div>
+            </div>
+            <p class="project-desc">
+              Precision design meets urban luxury. Centered in Kothapet, this premium high-rise residential project features extensive ventilation, modern automation, and direct connectivity to core arterial highways.
+            </p>
+            <button class="btn-know-more">Know More</button>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="col-md-6">
+          <div class="project-grid-card">
+            <div class="img-box">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600&auto=format&fit=crop" alt="NSL East Infracon">
+            </div>
+            <h3 class="project-title">NSL East Infracon</h3>
+            <div class="project-meta-info">
+              <div class="meta-item"><i class="fa-solid fa-map-pin"></i> Kothapet, Hyderabad</div>
+              <div class="meta-item"><i class="fa-solid fa-indian-rupee-sign"></i> 1.25 Cr onwards</div>
+            </div>
+            <p class="project-desc">
+              Our signature residential twin-tower landmark. Offering state-of-the-art infrastructure, landscaped terraces, skywalks, and premium common areas for a truly elevated family living experience.
+            </p>
+            <button class="btn-know-more">Know More</button>
+          </div>
+        </div>
+        
+        <!-- Project 3 -->
+        <div class="col-md-6">
+          <div class="project-grid-card">
+            <div class="img-box">
+              <img src="https://images.unsplash.com/photo-1554469384-e58fac16e23a?q=80&w=600&auto=format&fit=crop" alt="NSL East County">
+            </div>
+            <h3 class="project-title">NSL East County</h3>
+            <div class="project-meta-info">
+              <div class="meta-item"><i class="fa-solid fa-map-pin"></i> Uppal, Hyderabad</div>
+              <div class="meta-item"><i class="fa-solid fa-indian-rupee-sign"></i> 95 Lakhs onwards</div>
+            </div>
+            <p class="project-desc">
+              Affordable elegance defined. Nestled near the IT-corridors of Uppal, this mid-rise township offers fully-customized interiors, green landscapes, and modular designs for first-time home buyers.
+            </p>
+            <button class="btn-know-more">Know More</button>
+          </div>
+        </div>
+        
+        <!-- Project 4 -->
+        <div class="col-md-6">
+          <div class="project-grid-card">
+            <div class="img-box">
+              <img src="https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?q=80&w=600&auto=format&fit=crop" alt="NSL Sunborne">
+            </div>
+            <h3 class="project-title">NSL Sunborne</h3>
+            <div class="project-meta-info">
+              <div class="meta-item"><i class="fa-solid fa-map-pin"></i> Shamshabad, Hyderabad</div>
+              <div class="meta-item"><i class="fa-solid fa-indian-rupee-sign"></i> 2.4 Cr onwards</div>
+            </div>
+            <p class="project-desc">
+              Premium independent villas and row houses offering spacious gated living configurations, private parking spaces, landscaped gardens, and immediate airport highway connectivity.
+            </p>
+            <button class="btn-know-more">Know More</button>
+          </div>
+        </div>
+        
+        <!-- Project 5 -->
+        <div class="col-md-6">
+          <div class="project-grid-card">
+            <div class="img-box">
+              <img src="https://images.unsplash.com/photo-1464938050520-ef2270bb8ce8?q=80&w=600&auto=format&fit=crop" alt="NSL Sunborne Phase 2">
+            </div>
+            <h3 class="project-title">NSL Sunborne Phase 2</h3>
+            <div class="project-meta-info">
+              <div class="meta-item"><i class="fa-solid fa-map-pin"></i> Shamshabad, Hyderabad</div>
+              <div class="meta-item"><i class="fa-solid fa-indian-rupee-sign"></i> 2.7 Cr onwards</div>
+            </div>
+            <p class="project-desc">
+              The premium expansion block of Sunborne Gated Community. Featuring custom clubhouse memberships, larger build areas, rainwater harvesting systems, and solar energy grids.
+            </p>
+            <button class="btn-know-more">Know More</button>
+          </div>
+        </div>
+        
+        <!-- Project 6 -->
+        <div class="col-md-6">
+          <div class="project-grid-card">
+            <div class="img-box">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=600&auto=format&fit=crop" alt="Orion Villas">
+            </div>
+            <h3 class="project-title">Orion Villas</h3>
+            <div class="project-meta-info">
+              <div class="meta-item"><i class="fa-solid fa-map-pin"></i> Gachibowli, Hyderabad</div>
+              <div class="meta-item"><i class="fa-solid fa-indian-rupee-sign"></i> 3.5 Cr onwards</div>
+            </div>
+            <p class="project-desc">
+              Super-luxury custom villas situated at the epicenter of Financial District. Designed with high ceilings, private pools, personal elevator shafts, and top-tier Italian finishes.
+            </p>
+            <button class="btn-know-more">Know More</button>
+          </div>
+        </div>
+        
+        <!-- Project 7 -->
+        <div class="col-md-6">
+          <div class="project-grid-card">
+            <div class="img-box">
+              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600&auto=format&fit=crop" alt="Serene Woods">
+            </div>
+            <h3 class="project-title">Serene Woods</h3>
+            <div class="project-meta-info">
+              <div class="meta-item"><i class="fa-solid fa-map-pin"></i> Ghatkesar, Hyderabad</div>
+              <div class="meta-item"><i class="fa-solid fa-indian-rupee-sign"></i> 80 Lakhs onwards</div>
+            </div>
+            <p class="project-desc">
+              Eco-luxury community designed for peaceful suburban living. Surrounded by dense foliage, walking tracks, organic farms, and outdoor meditation zones.
+            </p>
+            <button class="btn-know-more">Know More</button>
+          </div>
+        </div>
+        
+        <!-- Project 8 -->
+        <div class="col-md-6">
+          <div class="project-grid-card">
+            <div class="img-box">
+              <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=600&auto=format&fit=crop" alt="Olympic Apartments">
+            </div>
+            <h3 class="project-title">Olympic Apartments</h3>
+            <div class="project-meta-info">
+              <div class="meta-item"><i class="fa-solid fa-map-pin"></i> Nanakramguda, Hyderabad</div>
+              <div class="meta-item"><i class="fa-solid fa-indian-rupee-sign"></i> 1.9 Cr onwards</div>
+            </div>
+            <p class="project-desc">
+              G+30 residential tower offering sports-themed amenities, tennis courts, skating rink, indoor badminton halls, and immediate access to the ORR.
+            </p>
+            <button class="btn-know-more">Know More</button>
+          </div>
+        </div>
+        
+        <!-- Project 9 -->
+        <div class="col-md-6">
+          <div class="project-grid-card">
+            <div class="img-box">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600&auto=format&fit=crop" alt="Hyde Park Apartments">
+            </div>
+            <h3 class="project-title">Hyde Park Apartments</h3>
+            <div class="project-meta-info">
+              <div class="meta-item"><i class="fa-solid fa-map-pin"></i> Kompally, Hyderabad</div>
+              <div class="meta-item"><i class="fa-solid fa-indian-rupee-sign"></i> 75 Lakhs onwards</div>
+            </div>
+            <p class="project-desc">
+              Modern family residential towers with ample children playing zones, supermarkets, primary healthcare clinics, and round-the-clock power backup.
+            </p>
+            <button class="btn-know-more">Know More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TESTIMONIALS SECTION
+       ========================================== -->
+  <section class="testimonials-section section-bg-light" id="testimonials">
+    <div class="container">
+      <div class="section-header-inline">
+        <div class="header-left">
+          <h2 class="font-heading">Testimonials</h2>
+        </div>
+        <div class="header-right">
+          <div class="slider-controls">
+            <button class="control-btn" id="res-test-prev" aria-label="Previous Testimonial">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="control-btn" id="res-test-next" aria-label="Next Testimonial">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="testimonials-slider-container" id="res-testimonials-slider">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-slide" style="flex: 0 0 450px;">
+          <div class="testimonial-quote-card">
+            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="quote-text">
+              "For us, NSL Infratech has been the most reliable developer. The engineering quality is exceptional and the delivery was completed right on schedule. They maintained transparency throughout the entire booking process."
+            </p>
+            <div class="quote-user">
+              <div class="user-avatar">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Ms. Divya S.">
+              </div>
+              <div>
+                <h5 class="user-name">Ms. Divya S.</h5>
+                <span class="user-desc">Homeowner, East County</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 2 -->
+        <div class="testimonial-slide" style="flex: 0 0 450px;">
+          <div class="testimonial-quote-card">
+            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="quote-text">
+              "Outstanding customer service. Right from selecting our flat layout to signing registration contracts, their relationship managers guided our family. The building amenities are exactly as promised."
+            </p>
+            <div class="quote-user">
+              <div class="user-avatar">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" alt="Mr. Harish K.">
+              </div>
+              <div>
+                <h5 class="user-name">Mr. Harish K.</h5>
+                <span class="user-desc">Homeowner, Sunborne</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Testimonial 3 -->
+        <div class="testimonial-slide" style="flex: 0 0 450px;">
+          <div class="testimonial-quote-card">
+            <div class="quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+            <p class="quote-text">
+              "Excellent investment choice. We bought a 3 BHK in Orion Villas and the property valuations have seen consistent double-digit growth. The community maintenance is highly professional."
+            </p>
+            <div class="quote-user">
+              <div class="user-avatar">
+                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop" alt="Mr. Anand Rao">
+              </div>
+              <div>
+                <h5 class="user-name">Mr. Anand Rao</h5>
+                <span class="user-desc">Investor</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       APPROVED BANKS SECTION
+       ========================================== -->
+  <section class="approved-banks-section section-bg-white" id="approved-banks">
+    <div class="container">
+      <h2 class="font-heading mb-4">Projects <span class="text-accent">Approved by</span></h2>
+      <p class="text-muted" style="font-size: 0.9rem;">Enjoy quick and hassle-free home loan approvals from India's leading financial institutions.</p>
+      
+      <div class="bank-logos-grid">
+        <div class="bank-logo-item">
+          <!-- Text Badge Style for SBI -->
+          <span class="fw-bold text-uppercase text-primary" style="font-size: 1.1rem; letter-spacing: 0.05em;"><i class="fa-solid fa-building-columns me-1"></i> SBI</span>
+        </div>
+        <div class="bank-logo-item">
+          <span class="fw-bold text-uppercase" style="font-size: 1.1rem; letter-spacing: 0.05em; color: #1c3d5a;"><i class="fa-solid fa-building-columns me-1"></i> HDFC Bank</span>
+        </div>
+        <div class="bank-logo-item">
+          <span class="fw-bold text-uppercase" style="font-size: 1.1rem; letter-spacing: 0.05em; color: #f26522;"><i class="fa-solid fa-building-columns me-1"></i> ICICI Bank</span>
+        </div>
+        <div class="bank-logo-item">
+          <span class="fw-bold text-uppercase text-danger" style="font-size: 0.95rem; letter-spacing: 0.02em;"><i class="fa-solid fa-building-columns me-1"></i> South Indian Bank</span>
+        </div>
+        <div class="bank-logo-item">
+          <span class="fw-bold text-uppercase" style="font-size: 1.1rem; letter-spacing: 0.05em; color: #d62246;"><i class="fa-solid fa-building-columns me-1"></i> Kotak</span>
+        </div>
+        <div class="bank-logo-item">
+          <span class="fw-bold text-uppercase" style="font-size: 1.1rem; letter-spacing: 0.05em; color: #9a0f2b;"><i class="fa-solid fa-building-columns me-1"></i> Axis Bank</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       STATISTICS ROW
+       ========================================== -->
+  <section class="stats-section section-bg-light" style="padding: 4rem 0;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <div class="stat-number">16</div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <div class="stat-number">20</div>
+            <div class="stat-label">Completed Projects</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <div class="stat-number">05</div>
+            <div class="stat-label">Upcoming Projects</div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stat-box">
+            <div class="stat-number">25000+</div>
+            <div class="stat-label">Happy Families</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SITE FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row footer-logo-row">
+        <div class="col-12">
+          <a href="index.html" class="brand-logo" id="brand-logo-footer">
+            <div class="logo-circle">NSL</div>
+            <div class="logo-text">
+              <span class="company-title">NSL Infratech</span>
+              <span class="company-sub">Space Growth Relationship</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-divider"></div>
+      
+      <div class="row">
+        <!-- Col 1: Contact info -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="footer-widget-title">Contact Us</h4>
+          <div class="footer-contact-info">
+            <div class="contact-item">
+              <div class="icon-box"><i class="fa-solid fa-location-dot"></i></div>
+              <div class="contact-text">12th Floor, Prestige Tower, Hitec City Phase-2, Hyderabad, TS, 500081</div>
+            </div>
+            <div class="contact-item">
+              <div class="icon-box"><i class="fa-solid fa-envelope"></i></div>
+              <div class="contact-text"><a href="mailto:info@nslinfratech.com">info@nslinfratech.com</a></div>
+            </div>
+            <div class="contact-item">
+              <div class="icon-box"><i class="fa-solid fa-phone"></i></div>
+              <div class="contact-text">
+                <strong>Commercial:</strong><br>
+                +91 9851475522 | 040-66774423<br>
+                <strong>Residential:</strong><br>
+                +91 9849202522 | 040-23302522
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Col 2: Projects -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="footer-widget-title">Projects</h4>
+          <ul class="footer-links">
+            <li><a href="commercial-office-spaces.html">Commercial</a></li>
+            <li><a href="residential-apartments.html">Residential</a></li>
+          </ul>
+        </div>
+        
+        <!-- Col 3: About Company -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="footer-widget-title">About Company</h4>
+          <ul class="footer-links">
+            <li><a href="about-us.html#ethos">NSL Infratech</a></li>
+            <li><a href="https://www.nsl.com" target="_blank" rel="noopener">NSL Group</a></li>
+            <li><a href="index.html#blog">Blogs</a></li>
+            <li><a href="#" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#typology-collapse">Typology</a></li>
+          </ul>
+          <div class="collapse mt-2" id="typology-collapse">
+            <ul class="footer-links ps-3" style="font-size: 0.8rem;">
+              <li><a href="commercial-office-spaces.html">Office Spaces</a></li>
+              <li><a href="commercial-office-spaces.html">IT Parks</a></li>
+              <li><a href="residential-apartments.html">Residential Apartments</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Col 4: Follow Us -->
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h4 class="footer-widget-title">Follow Us</h4>
+          <p class="text-muted" style="font-size: 0.85rem;">Connect with us on our primary social media platforms.</p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p class="copyright-text">Copyright &copy; 2026 NSL Infratech. All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       VANILLA JAVASCRIPT BEHAVIORS
+       ========================================== -->
+  <script>
+    // Header Scroll Transition
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        header.classList.add('header-scrolled');
+      } else {
+        header.classList.remove('header-scrolled');
+      }
+    });
+
+    // Mobile Navigation Toggle
+    const navToggle = document.getElementById('nav-toggle');
+    const closeMobileNav = document.getElementById('close-mobile-nav');
+    const mobileNavPanel = document.getElementById('mobile-nav-panel');
+    const mobileNavBackdrop = document.getElementById('mobile-nav-backdrop');
+
+    function openMobileMenu() {
+      mobileNavPanel.classList.add('active');
+      mobileNavBackdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+      mobileNavPanel.classList.remove('active');
+      mobileNavBackdrop.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    navToggle.addEventListener('click', openMobileMenu);
+    closeMobileNav.addEventListener('click', closeMobileMenu);
+    mobileNavBackdrop.addEventListener('click', closeMobileMenu);
+
+    // Close mobile menu on clicking links
+    const mobileLinks = mobileNavPanel.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Testimonial Slider Logic
+    const testimonialsSlider = document.getElementById('res-testimonials-slider');
+    const testPrev = document.getElementById('res-test-prev');
+    const testNext = document.getElementById('res-test-next');
+    
+    if (testimonialsSlider && testPrev && testNext) {
+      testPrev.addEventListener('click', () => {
+        testimonialsSlider.scrollBy({ left: -465, behavior: 'smooth' });
+      });
+      testNext.addEventListener('click', () => {
+        testimonialsSlider.scrollBy({ left: 465, behavior: 'smooth' });
+      });
+    }
+  </script>
+  
+  <!-- Bootstrap JS Bundle for collapsible menus -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

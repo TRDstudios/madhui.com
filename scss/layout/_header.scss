@@ -1,0 +1,273 @@
+.site-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 1.25rem 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  transition: $transition-base;
+  
+  &.header-scrolled {
+    position: fixed;
+    background: rgba(15, 17, 18, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 0.75rem 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .navbar-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: $container-max-width;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+}
+
+// Brand Logo Layout
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none !important;
+
+  .logo-circle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: $primary-red;
+    @include flex-center;
+    font-family: $font-family-heading;
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: #ffffff;
+    letter-spacing: 0.02em;
+    box-shadow: 0 2px 8px rgba(189, 30, 36, 0.3);
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+    
+    .company-title {
+      font-family: $font-family-heading;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #ffffff;
+      line-height: 1.1;
+      letter-spacing: 0.02em;
+    }
+    
+    .company-sub {
+      font-size: 0.65rem;
+      color: rgba(255, 255, 255, 0.65);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// Navigation Menu Links
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin-bottom: 0;
+  
+  @include respond-to(md) {
+    display: none; // Hidden on mobile/tablet, will use toggle
+  }
+
+  .nav-item-custom {
+    a {
+      font-family: $font-family-heading;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.85);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.5rem 0;
+      position: relative;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: $primary-red;
+        transition: $transition-base;
+      }
+      
+      &:hover, &.active {
+        color: #ffffff;
+        &::after {
+          width: 100%;
+        }
+      }
+      
+      &.active {
+        color: $primary-red;
+        &::after {
+          background-color: $primary-red;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// Mobile navigation menu toggle and menu panel
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  
+  @include respond-to(md) {
+    display: block;
+  }
+}
+
+// Mobile Slide-in Nav Menu
+.mobile-nav-panel {
+  position: fixed;
+  top: 0;
+  right: -280px;
+  width: 280px;
+  height: 100vh;
+  background-color: $bg-dark;
+  z-index: 1050;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.25);
+  
+  &.active {
+    right: 0;
+  }
+  
+  .close-mobile-nav {
+    align-self: flex-end;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+    a {
+      font-family: $font-family-heading;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.8);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      
+      &:hover, &.active {
+        color: $primary-red;
+      }
+    }
+  }
+}
+
+.mobile-nav-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 1040;
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition-base;
+  
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+// Hover dropdown menu
+.dropdown-custom {
+  position: relative;
+  
+  .dropdown-trigger {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    cursor: pointer;
+  }
+  
+  .dropdown-menu-custom {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #0f1112;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0.5rem 0;
+    min-width: 230px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1000;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    margin: 0;
+    list-style: none;
+    
+    li {
+      margin: 0 !important;
+      padding: 0 !important;
+      display: block !important;
+      
+      a {
+        display: block !important;
+        padding: 0.65rem 1.25rem !important;
+        font-size: 0.72rem !important;
+        font-weight: 500 !important;
+        text-transform: uppercase !important;
+        color: rgba(255, 255, 255, 0.75) !important;
+        text-align: left !important;
+        border: none !important;
+        width: 100% !important;
+        letter-spacing: 0.05em !important;
+        
+        &::after {
+          display: none !important;
+        }
+        
+        &:hover {
+          color: #ffffff !important;
+          background-color: rgba(189, 30, 36, 0.15) !important;
+          padding-left: 1.5rem !important;
+        }
+      }
+    }
+  }
+  
+  &:hover {
+    .dropdown-menu-custom {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+}
+

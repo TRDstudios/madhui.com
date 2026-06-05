@@ -1,0 +1,127 @@
+.site-footer {
+  background-color: $bg-white;
+  color: $text-dark;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+  .footer-logo-row {
+    margin-bottom: 2rem;
+    
+    .brand-logo {
+      .logo-circle {
+        background-color: $primary-red;
+        color: #ffffff;
+      }
+      .logo-text {
+        .company-title {
+          color: $text-dark;
+        }
+        .company-sub {
+          color: $text-muted;
+        }
+      }
+    }
+  }
+
+  .footer-divider {
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+  }
+
+  .footer-widget-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: capitalize;
+    color: $text-dark;
+  }
+
+  .footer-links {
+    padding-left: 0;
+    margin-bottom: 0;
+    
+    li {
+      margin-bottom: 0.75rem;
+      
+      a {
+        font-size: 0.85rem;
+        color: $text-muted;
+        transition: $transition-base;
+        
+        &:hover {
+          color: $primary-red;
+          padding-left: 4px;
+        }
+      }
+    }
+  }
+
+  .footer-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    .contact-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+      
+      .icon-box {
+        color: $primary-red;
+        font-size: 0.95rem;
+        margin-top: 0.2rem;
+      }
+      
+      .contact-text {
+        font-size: 0.85rem;
+        color: $text-muted;
+        line-height: 1.5;
+        
+        a {
+          &:hover {
+            color: $primary-red;
+          }
+        }
+      }
+    }
+  }
+
+  .social-links {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    
+    .social-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      color: $text-muted;
+      @include flex-center;
+      transition: $transition-base;
+      font-size: 0.9rem;
+      
+      &:hover {
+        background-color: $primary-red;
+        border-color: $primary-red;
+        color: #ffffff;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  .footer-bottom {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+    
+    .copyright-text {
+      font-size: 0.8rem;
+      color: $text-muted;
+      margin-bottom: 0;
+    }
+  }
+}
